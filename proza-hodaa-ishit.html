@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ארכיון חנוך לוין</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <svg
+      style="position: absolute; width: 0; height: 0"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <defs>
+        <filter id="grainy-text" x="0%" y="0%" width="100%" height="100%">
+          <feTurbulence
+            id="turb-content"
+            baseFrequency="0.9"
+            numOctaves="1"
+            type="fractalNoise"
+            result="noise"
+          />
+          <feDisplacementMap
+            id="disp-content"
+            in="SourceGraphic"
+            in2="noise"
+            scale="15"
+            xChannelSelector="R"
+            yChannelSelector="B"
+          />
+
+          <animate
+            xlink:href="#turb-content"
+            attributeName="baseFrequency"
+            from="0.9"
+            to="0.95"
+            dur="300s"
+            repeatCount="indefinite"
+          />
+          <animate
+            xlink:href="#disp-content"
+            id="trigger-out"
+            attributeName="scale"
+            from="5"
+            to="15"
+            dur="500ms"
+            fill="freeze"
+            begin="indefinite"
+          />
+        </filter>
+
+        <filter id="grainy-text-over" x="0%" y="0%" width="100%" height="100%">
+          <feTurbulence
+            baseFrequency="0.9"
+            numOctaves="1"
+            type="fractalNoise"
+            result="noise"
+          />
+          <feDisplacementMap
+            id="disp-content-over"
+            in="SourceGraphic"
+            in2="noise"
+            scale="0"
+            xChannelSelector="R"
+            yChannelSelector="B"
+          />
+
+          <animate
+            xlink:href="#disp-content-over"
+            id="trigger-over"
+            attributeName="scale"
+            from="15"
+            to="0"
+            dur="250ms"
+            fill="freeze"
+            begin="indefinite"
+          />
+        </filter>
+      </defs>
+    </svg>
+    <header class="site-header">
+      <nav class="breadcrumb-site-nav" aria-label="breadcrumb">
+        <ol class="breadcrumb-site-nav-list">
+          <li class="breadcrumb-item">
+            <a href="index.html">עמוד הבית</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="texts.html">/טקסטים</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="proza.html">/פרוזה</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="proza-hodaa-ishit.html">/הודעה אישית</a>
+          </li>
+        </ol>
+      </nav>
+
+      <a href="index.html" class="site-logo">
+        <img src="images/logo-header.svg" alt="חנוך לוין" />
+      </a>
+    </header>
+    <nav class="site-nav" aria-label="תפריט ראשי">
+      <ul class="site-nav-list">
+        <li class="site-nav-list-item grainy-text">
+          <details name="navbar">
+            <summary class="nav-bar-accordion">טקסטים</summary>
+
+            <ul class="submenu">
+              <li class="submenu-item"><a href="texts.html">מחזות</a></li>
+              <li class="submenu-item">
+                <a href="sketches.html">מערכונים</a>
+              </li>
+              <li class="submenu-item">
+                <a href="pizmonim.html">פזמונים</a>
+              </li>
+              <li class="submenu-item"><a href="proza.html">פרוזה</a></li>
+              <li class="submenu-item"><a href="shira.html">שירה</a></li>
+              <li class="submenu-item"><a href="kids.html">ילדים</a></li>
+              <li class="submenu-item">
+                <a href="tascitim.html">תסכיתים ותסריטים</a>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li class="site-nav-list-item grainy-text">
+          <a href="books.html">ספרים</a>
+        </li>
+        <li class="site-nav-list-item grainy-text">
+          <details name="navbar">
+            <summary class="nav-bar-accordion">הפקות</summary>
+
+            <ul class="submenu">
+              <li class="submenu-item">
+                <a href="productions.html">הפקות</a>
+              </li>
+              <li class="submenu-item">
+                <a href="current-productions.html">רצות כעת</a>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li class="site-nav-list-item grainy-text">
+          <details name="navbar">
+            <summary class="nav-bar-accordion">חו״ל</summary>
+
+            <ul class="submenu">
+              <li class="submenu-item">
+                <a href="abroad.html">הפקות בחו״ל</a>
+              </li>
+              <li class="submenu-item">
+                <a href="current-abroad.html">רצות כעת</a>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li class="site-nav-list-item grainy-text">
+          <a href="about.html">אודות</a>
+        </li>
+        <li class="site-nav-list-item grainy-text">
+          <a href="quotes.html">מצטטים</a>
+        </li>
+        <li class="site-nav-list-item grainy-text">
+          <details name="navbar">
+            <summary class="nav-bar-accordion">מדיה</summary>
+
+            <ul class="submenu">
+              <li class="submenu-item"><a href="video.html">וידאו</a></li>
+              <li class="submenu-item">
+                <a href="audio.html">אודיו</a>
+              </li>
+              <li class="submenu-item">
+                <a href="podcasts.html">פודקאסטים</a>
+              </li>
+              <li class="submenu-item"><a href="gallery.html">גלריה</a></li>
+              <li class="submenu-item">
+                <a href="itonut.html">עיתונות ורשת</a>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li class="site-nav-list-item grainy-text">
+          <a href="news.html">חדשות</a>
+        </li>
+        <li class="site-nav-list-item grainy-text">
+          <a href="contact.html">קשר</a>
+        </li>
+      </ul>
+    </nav>
+    <main class="page-content">
+      <div class="play-page-wrapper">
+        <div class="play-page-banner">
+          <h1 class="play-page-title grainy-text">הודעה אישית</h1>
+          <p class="play-page-sub-title">(מאמר על הסאטירה)</p>
+          <p class="play-page-about">שנת הוצאה: 1965</p>
+          <p class="play-page-about">
+            בספר: <a href="books.html">ספר חנוך לוין הצעיר</a>
+          </p>
+        </div>
+        <div class="play-script">
+          <p class="inline-stage-direction">
+            [זהו המאמר הרציני היחיד שכתב חנוך לוין. המאמר נכתב עם תחילת עבודתו
+            של לוין בעיתון הסטודנטים 'דרבן', שם פירסם (החל מנובמבר 1965) את
+            העמוד הסאטירי "דף האחוריים של חנוך לוין", שקטעים ממנו מופיעים באתר
+            הזה.]
+          </p>
+          <div class="play-script-part">
+            <h3 class="play-script-part-header">הודעה אישית</h3>
+            <p>
+              בכותבי את הדף הזה אני שרוי במצב שעיתונאים זבי-קולמוס מכנים אותו
+              מזה כחודשיים בשם "אי־נחת", ומובנו הרטנוּניוּת שבתוך השמנוּניוּת,
+              משהו מעין המועקה בקיבתו של נהג "אגד" בהתכופפו להחליף את הגלגל.
+              לאחר שאני שולל כל נימה טראגית מ"אי־הנחת" שלי, עלי לייחס לה מעמד
+              עקרוני. אני טוען שהיא מַתְנָה כתיבתו של דף סאטירי. היא ראויה
+              לפולמוס פנימי חריף יותר ולניתוח מעמיק יותר מזה שהקצבתי לה
+              בבדל־הטור הזה אבל עלי לפחות לרמוז לכם על מרכיביה על מנת שלא אהיה
+              בעיניכם כצעיר מתרונן בהתחכמויותיו.
+            </p>
+          </div>
+          <div class="play-script-part">
+            <h3 class="play-script-part-header">אמת</h3>
+            <p>
+              הסאטירה, וההומור בכלל, משתמשים באלמנט האבסורד ובכך הם חוטאים לאמת,
+              ומה שגרוע מזה, לאדם. המציאות, לעולם אינה אבסורדית וחד־משמעית כפי
+              שנדמה שעה שאנו תופשים רק אספקט אחד שלה או מסלפים את עובדותיה כדי
+              לשרת מגמה נתונה בשרירות. בעיית הערבים בישראל היא באמת הרבה יותר
+              סבוכה וקשה מכדי שאפשר יהיה להציע דרך לפתרונה בקריאות־תגר או
+              בעצרות־עם. הסאטירה, לא רק שאינה יכולה להתיר את הבעיה, היא אף מעקמת
+              אותה, לכן הינה חוקית כתופעה אמנותית ובזויה כמכשיר פוליטי־חברתי. על
+              הסאטיריקן לגלות ספקנות עצמית ביחס ישר לכוח דמיונו. צריך, על כל
+              פנים, להודות שבתחום החיים המעשיים זהה ההומור עם קלות הדעת.
+            </p>
+          </div>
+          <div class="play-script-part">
+            <h3 class="play-script-part-header">חינוך</h3>
+            <p>
+              מוּן על ערכי המסורת הסוציאליסטית או הדתית, אי אפשר היה ליישוב
+              שהתנחל בארץ שלא לשעבד את האמנות למטרות שמחוץ לה. כך גויסו לשירות
+              החינוך לא רק האמנות על כל תחומיה, אלא אף גופים שעירים ומיובלים
+              ככנסת והצבא, שלא לדבר על העיתונות. זו הסיבה שכה טבעי הדבר לכתבי
+              "דרבן" לנסות לשלוח ידם ללא היסוס בענפי הנבואה, ההטפה והתוכחה. לְמה
+              יחנך אותנו "דרבן"? לאזרחות טובה, לנימוסים טובים, לשיבה טובה,
+              לאהבה, כבוד, רחיצת אוזניים וכמובן — קריאת עיתונים. השאלה האחת היא,
+              עד מתי תהיה טבועה קללת־הסירוס הזו של המגמה החינוכית בפעולתם של
+              מכשירים קומוניקטיביים—ציבוריים שתפקידיהם אחרים לגמרי? הרי העיתונות
+              העברית השיגה דרגת צחנה כזאת שלא תמצא בה היום אלא פשפשים! השאלה
+              השנייה, הפרטית, היא בחסד איזה אל נקראו עורך "דרבן" וצאן מרעיתו
+              לחנך את ציבור הסטודנטים? כדוגמה ממשית, בכוח איזו זכות רשאי אני
+              להוכיח אתכם על יחס־זנות עם גרמניה? ובכלל, מי רשאי לחנך, את מי ועד
+              היכן? הבעיות הן קשות, מכל מקום, אין זה מובן מאליו שהזכות לחנך
+              נתונה אוטומטית לכל מי שנטל על עצמו את זכות ההבעה. נטייה כזו, על
+              היוהרה ותחושת האפוטרופסות המלווים אותה, מסריחה כאלכוהוליזם
+              ושיכרונה חמור יותר.
+            </p>
+          </div>
+          <div class="play-script-part">
+            <h3 class="play-script-part-header">כוח</h3>
+            <p>
+              המילה היא סמל ריק. כוחה במה שמסתתר מאחוריה, במשמעות הלוגית,
+              האסתטית או הסמנטית שההסכם מעניק לה. המילה מביעה את המציאות, אך
+              אינה נוטלת בה חלק. אפשר לאטום אוזניים מלשמוע, אך לא לאוטמן ממכות.
+              כוונתי מתמַצֵית במישור חברתי־פוליטי. לכן על אפם ועל חמתם של
+              פראזיולוגים, הלשון כשלעצמה אינה כוח ואינה נשק ועוצמתה המאגית
+              מתמסרת עם סטירת הלחי הראשונה. תכופות אני חש שהדיבור, גם הצעקה,
+              חונקים אותי בעליבותם וכפות ידי מזיעות מרצון לדבר בלשונן הן. על מי
+              שעוסק בלשון להכיר בגבולותיה של המילה, ובייחוד הדבר אמור לגבי זה
+              היוצא לסייף בעזרתה, שעל־פי־רוב הוא ניצל רק בזכות מצנפת הליצן שעל
+              ראשו.
+            </p>
+          </div>
+          <div class="play-script-part">
+            <h3 class="play-script-part-header">אישיות</h3>
+            <p>
+              מה אני עושה כדי להיחלץ מ"אי־הנחת" המורכבת (ואולי המוגזמת) כל־כך?
+              אני זונח את הסאטירה וכותב את המוֹדעוֹת של סבתא אליהו. אבל הן אינן
+              נושאות חן בעינֵי חברַי למערכת, או שאין מקום בעיתון סטודנטים לסבתא
+              זקנה החסרה שאיפות חינוכיות וחברתיות, או משום שאין מקום בעיתון
+              סטודנטים לצעיר משתטה; זה וזה אינם גורמים לי נחת. ואם אני בכל זאת
+              כותב, וכנראה שאכתוב הלאה, הרי זה משום שכשאני משייט לי בתוגה
+              חד־תרנית בין "איי־הנחת" שלי, יכול אני לראות באופק את "כֵּף התקווה
+              הטובה": איש לא יקרא את העיתון!
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ארכיון חנוך לוין</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <svg
+      style="position: absolute; width: 0; height: 0"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <defs>
+        <filter id="grainy-text" x="0%" y="0%" width="100%" height="100%">
+          <feTurbulence
+            id="turb-content"
+            baseFrequency="0.9"
+            numOctaves="1"
+            type="fractalNoise"
+            result="noise"
+          />
+          <feDisplacementMap
+            id="disp-content"
+            in="SourceGraphic"
+            in2="noise"
+            scale="15"
+            xChannelSelector="R"
+            yChannelSelector="B"
+          />
+
+          <animate
+            xlink:href="#turb-content"
+            attributeName="baseFrequency"
+            from="0.9"
+            to="0.95"
+            dur="300s"
+            repeatCount="indefinite"
+          />
+          <animate
+            xlink:href="#disp-content"
+            id="trigger-out"
+            attributeName="scale"
+            from="5"
+            to="15"
+            dur="500ms"
+            fill="freeze"
+            begin="indefinite"
+          />
+        </filter>
+
+        <filter id="grainy-text-over" x="0%" y="0%" width="100%" height="100%">
+          <feTurbulence
+            baseFrequency="0.9"
+            numOctaves="1"
+            type="fractalNoise"
+            result="noise"
+          />
+          <feDisplacementMap
+            id="disp-content-over"
+            in="SourceGraphic"
+            in2="noise"
+            scale="0"
+            xChannelSelector="R"
+            yChannelSelector="B"
+          />
+
+          <animate
+            xlink:href="#disp-content-over"
+            id="trigger-over"
+            attributeName="scale"
+            from="15"
+            to="0"
+            dur="250ms"
+            fill="freeze"
+            begin="indefinite"
+          />
+        </filter>
+      </defs>
+    </svg>
+
+    <header class="site-header">
+      <nav class="breadcrumb-site-nav" aria-label="breadcrumb">
+        <ol class="breadcrumb-site-nav-list">
+          <li class="breadcrumb-item">
+            <a href="index.html">/עמוד הבית</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="about.html">/אודות</a>
+          </li>
+        </ol>
+      </nav>
+
+      <a href="index.html" class="site-logo">
+        <img src="images/logo-header.svg" alt="חנוך לוין" />
+      </a>
+    </header>
+    <div class="page-layout">
+      <nav class="site-nav" aria-label="תפריט ראשי">
+        <ul class="site-nav-list">
+          <li class="site-nav-list-item grainy-text">
+            <details name="navbar">
+              <summary class="nav-bar-accordion">טקסטים</summary>
+
+              <ul class="submenu">
+                <li class="submenu-item"><a href="texts.html">מחזות</a></li>
+                <li class="submenu-item">
+                  <a href="sketches.html">מערכונים</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="pizmonim.html">פזמונים</a>
+                </li>
+                <li class="submenu-item"><a href="proza.html">פרוזה</a></li>
+                <li class="submenu-item"><a href="shira.html">שירה</a></li>
+                <li class="submenu-item"><a href="kids.html">ילדים</a></li>
+                <li class="submenu-item">
+                  <a href="tascitim.html">תסכיתים ותסריטים</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <a href="books.html">ספרים</a>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <details name="navbar">
+              <summary class="nav-bar-accordion">הפקות</summary>
+
+              <ul class="submenu">
+                <li class="submenu-item">
+                  <a href="productions.html">הפקות</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="current-productions.html">רצות כעת</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <details name="navbar">
+              <summary class="nav-bar-accordion">חו״ל</summary>
+
+              <ul class="submenu">
+                <li class="submenu-item">
+                  <a href="abroad.html">הפקות בחו״ל</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="current-abroad.html">רצות כעת</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li class="site-nav-list-item current grainy-text">
+            <a href="about.html">אודות</a>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <a href="quotes.html">מצטטים</a>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <details name="navbar">
+              <summary class="nav-bar-accordion">מדיה</summary>
+
+              <ul class="submenu">
+                <li class="submenu-item"><a href="video.html">וידאו</a></li>
+                <li class="submenu-item">
+                  <a href="audio.html">אודיו</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="podcasts.html">פודקאסטים</a>
+                </li>
+                <li class="submenu-item"><a href="gallery.html">גלריה</a></li>
+                <li class="submenu-item">
+                  <a href="itonut.html">עיתונות ורשת</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <a href="news.html">חדשות</a>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <a href="contact.html">קשר</a>
+          </li>
+        </ul>
+      </nav>
+      <main class="page-content">
+        <div class="about-page-content-wrapper">
+          <div class="about-sidebar">
+            <h1 class="page-title grainy-text">אודות</h1>
+            <p class="main-quotation">
+              חנוך לוין הוא בלי ספק גדול מחזאי ישראל, ואחד היוצרים החשובים
+              והמגוּונים ביותר בתרבות העברית עד היום. יצירתו, המקיפה כ־20 כרכים,
+              כוללת מגוון רחב מאוד של ז'אנרים ספרותיים – מחזות קומיים וטראגיים,
+              קבּרטים סאטיריים, סיפורים וקטעי פרוזה, שירים ופזמונים, מערכונים,
+              תסכיתי רדיו ותסריטים. בתוך כל המכלול הנרחב הזה יצר לוין עולם משלו,
+              בעל מאפיינים שאי־אפשר לטעות בהם, ושפת כתיבה שאין דומה לה בעברית
+              המודרנית.
+            </p>
+          </div>
+          <div class="about-page-script">
+            <h3 class="script-header">חנוך לוין, חייו ויצירתו</h3>
+            <p class="about-page-content">
+              לוין נולד בתל אביב בשנת 1943, בן שֵני להורים שעזבו את פולין בשנות
+              ה-1930. המשפחה היתה מעוטת אמצעים וגרה בדירה קטנה בדרום העיר. אביו,
+              יהודי דתי, פרנס בקושי את המשפחה עם חנות המכולת שהחזיק. לאחר מות
+              האב, כשחנוך היה כבן 13, הוא יצא לעבוד כדי לעזור בפרנסת המשפחה,
+              והמשיך את לימודיו בשיעורי ערב. עוד כנער נטש לחלוטין את אורח החיים
+              הדתי, ולאחר שירות בצבא התחיל ללמוד באוניברסיטת תל אביב. מ-1965
+              התחיל לפרסם שירים בכתבי-עת ספרותיים, וכן כתב קטעים סאטיריים לעיתון
+              סטודנטים. זו היתה התחלה של קריירת כתיבה אינטנסיבית ובלתי פוסקת
+              שנמשכה ממש עד מותו.
+            </p>
+            <img src="images/hanoch-levin-new.jpg" alt="" />
+            <p class="about-page-content">
+              מלחמת ששת הימים, ביוני 1967, שסימנה מיפנה בחיי מדינת ישראל, עתידה
+              להיות ציון דרך גם בחייו של לוין. זמן קצר לאחר המלחמה, בהיותו בן
+              24, כתב לוין קברט בשם "אַת ואני והמלחמה הבאה", שלעג בחריפות
+              לאֶוּפוֹריה הישראלית על הניצחון במלחמה וניפץ את המיתוסים של גבורה
+              ושל הקרבה למען המולדת. זה היה אחד הקולות הראשונים בישראל שביקרו
+              בחריפות את הכיבוש ואת מה שהוא מעולל לשני הצדדים. בעקבות הקברט הזה,
+              ושניים נוספים שבאו אחריו, שמו של לוין התחיל להיות מוכר בציבור
+              הישראלי כיוצר מוכשר אבל גם מעורר מחלוקת.
+            </p>
+            <p class="about-page-content">
+              במקביל ליצירת הקברטים התחיל לוין לכתוב מחזות, בהתחלה בעיקר
+              קומדיות, שבהן הצד הקומי מעורב תמיד בביקורת נשכנית על החברה
+              הישראלית. בתחילת שנות ה-1970 הוא התחיל גם לביים את מחזותיו, שכמעט
+              כולם זכו להצלחה רבה ולביקורות משבחות. בשנים האלה הוא פיתח את השפה
+              התיאטרונית המיוחדת לו, ככותב מחזות וכבמאי, והשם לוין התחיל להיות
+              מזוהה בציבור ישראלי עם תיאטרון ייחודי ואיכותי.
+            </p>
+            <p class="about-page-content">
+              אז, בשנים 1979, 1981, 1982, העלה לוין בזה אחר זה את המחזות "הוצאה
+              להורג", "יסורי איוב" ו"הזונה הגדולה מבבל", מחזות שהציגו על הבמה
+              סצנות קשות, אכזריות, שותתות דם, אם כי גם בהם לא נעדר היבט
+              קומי-מקאבּרי. לצד הזעזוע שביטא חלק מהקהל, התערובת המיוחדת של אימה,
+              הומור ופיוט שבמחזות האלה מיקמה את לוין בתודעה הישראלית כיוצר דרמטי
+              מיוחד במינו.
+            </p>
+            <p class="about-page-content">
+              אלה היו הראשונים מבין המחזות הגדולים של לוין – טרגדיות, דרמות
+              אנושיות, מחזות מיתולוגיים – העוסקים בנושאים אוניברסליים שחורגים
+              הרבה מעבר למציאות הישראלית או היהודית. מאז המשיך לוין לכתוב ולביים
+              ללא הפסקה גם מחזות רציניים וגם קומדיות – בעירוב מתמיד של הז'אנרים
+              התיאטרוניים – ומעמדו כמחזאי מוביל בישראל (וכבמאי של מחזותיו) הלך
+              והתבסס. בשנים האחרונות לחייו, במיוחד לאחר שהעלה את המחזות הילד
+              חולם", "ההולכים בחושך" ו"אשכבה", היה כבר ברור שמדובר בתופעה
+              יוצאת-דופן בנוף התרבות הישראלית.
+            </p>
+            <!--
+            <div class="images-container">
+              <img
+                class="image-container-item"
+                src="images/about-page/2073-1561475490.jpg"
+                alt=""
+              />
+              <img
+                class="image-container-item"
+                src="images/about-page/2073-1591601099_4.jpg"
+                alt=""
+              />
+              <img
+                class="image-container-item"
+                src="images/about-page/2073-1724836246_0.jpg"
+                alt=""
+              />
+            </div>
+        -->
+
+            <p class="about-page-content">
+              בשנת 1997, כשאובחנה אצל לוין מחלת הסרטן, הוחלט על הוצאת מהדורה של
+              כל כתביו בדפוס. אז התגלה כי לוין מחזיק במגירותיו קרוב לשלושים
+              מחזות שלא היו ידועים קודם. הוא המשיך לכתוב עד ימיו האחרונים, ובבית
+              החולים שבו נפטר עוד התחיל לביים את המחזה "הבכיינים", אבל לא הספיק
+              לסיים. מאז מותו ב-1999, עוד ועוד ממחזותיו ממשיכים לעלות על הבמה
+              בישראל, לצד הפקות חדשות של מחזותיו המוכרים שהפכו כבר לקלאסיקה.
+            </p>
+            <p class="about-page-content">
+              לאחר מותו של לוין התחילה יצירתו להגיע אל הקהל גם בארצות אחרות.
+              מחזותיו תורגמו עד היום ליותר מ-20 שפות, מספר ההפקות של מחזותיו
+              בעולם מגיע למאות, ומהדורות דפוס של תרגומי יצירותיו בשפות שונות
+              הולכות ומתרבות משנה לשנה. העולם מתחיל להכיר את "העולם של חנוך
+              לוין", ואין ספק שהוא הולך ותופס את מקומו בשורה הראשונה של המחזאות
+              העולמית.
+            </p>
+            <p class="about-page-content">
+              חנוך לוין היה נשוי שלוש פעמים, ונולדו לו ארבעה ילדים משלוש נשותיו.
+            </p>
+            <p class="about-page-content">כתב: מולי מלצר</p>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script>
+      const headers = document.querySelectorAll(".grainy-text");
+
+      headers.forEach((header) => {
+        header.addEventListener("mouseenter", () => {
+          document.getElementById("trigger-over").beginElement();
+        });
+
+        header.addEventListener("mouseleave", () => {
+          document.getElementById("trigger-out").beginElement();
+        });
+      });
+    </script>
+  </body>
+</html>

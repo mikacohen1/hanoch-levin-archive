@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ארכיון חנוך לוין</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <svg
+      style="position: absolute; width: 0; height: 0"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <defs>
+        <filter id="grainy-text" x="0%" y="0%" width="100%" height="100%">
+          <feTurbulence
+            id="turb-content"
+            baseFrequency="0.9"
+            numOctaves="1"
+            type="fractalNoise"
+            result="noise"
+          />
+          <feDisplacementMap
+            id="disp-content"
+            in="SourceGraphic"
+            in2="noise"
+            scale="15"
+            xChannelSelector="R"
+            yChannelSelector="B"
+          />
+
+          <animate
+            xlink:href="#turb-content"
+            attributeName="baseFrequency"
+            from="0.9"
+            to="0.95"
+            dur="300s"
+            repeatCount="indefinite"
+          />
+          <animate
+            xlink:href="#disp-content"
+            id="trigger-out"
+            attributeName="scale"
+            from="5"
+            to="15"
+            dur="500ms"
+            fill="freeze"
+            begin="indefinite"
+          />
+        </filter>
+
+        <filter id="grainy-text-over" x="0%" y="0%" width="100%" height="100%">
+          <feTurbulence
+            baseFrequency="0.9"
+            numOctaves="1"
+            type="fractalNoise"
+            result="noise"
+          />
+          <feDisplacementMap
+            id="disp-content-over"
+            in="SourceGraphic"
+            in2="noise"
+            scale="0"
+            xChannelSelector="R"
+            yChannelSelector="B"
+          />
+
+          <animate
+            xlink:href="#disp-content-over"
+            id="trigger-over"
+            attributeName="scale"
+            from="15"
+            to="0"
+            dur="250ms"
+            fill="freeze"
+            begin="indefinite"
+          />
+        </filter>
+      </defs>
+    </svg>
+
+    <header class="site-header">
+      <nav class="breadcrumb-site-nav" aria-label="breadcrumb">
+        <ol class="breadcrumb-site-nav-list">
+          <li class="breadcrumb-item">
+            <a href="index.html">/עמוד הבית</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="texts.html">/טקסטים</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="pizmonim.html">/פזמונים</a>
+          </li>
+        </ol>
+      </nav>
+
+      <a href="index.html" class="site-logo">
+        <img src="images/logo-header.svg" alt="חנוך לוין" />
+      </a>
+    </header>
+    <div class="page-layout">
+      <nav class="site-nav" aria-label="תפריט ראשי">
+        <ul class="site-nav-list">
+          <li class="site-nav-list-item grainy-text">
+            <details name="navbar">
+              <summary class="nav-bar-accordion">טקסטים</summary>
+
+              <ul class="submenu">
+                <li class="submenu-item"><a href="texts.html">מחזות</a></li>
+                <li class="submenu-item">
+                  <a href="sketches.html">מערכונים</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="pizmonim.html">פזמונים</a>
+                </li>
+                <li class="submenu-item"><a href="proza.html">פרוזה</a></li>
+                <li class="submenu-item"><a href="shira.html">שירה</a></li>
+                <li class="submenu-item"><a href="kids.html">ילדים</a></li>
+                <li class="submenu-item">
+                  <a href="tascitim.html">תסכיתים ותסריטים</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <a href="books.html">ספרים</a>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <details name="navbar">
+              <summary class="nav-bar-accordion">הפקות</summary>
+
+              <ul class="submenu">
+                <li class="submenu-item">
+                  <a href="productions.html">הפקות</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="current-productions.html">רצות כעת</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <details name="navbar">
+              <summary class="nav-bar-accordion">חו״ל</summary>
+
+              <ul class="submenu">
+                <li class="submenu-item">
+                  <a href="abroad.html">הפקות בחו״ל</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="current-abroad.html">רצות כעת</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <a href="about.html">אודות</a>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <a href="quotes.html">מצטטים</a>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <details name="navbar">
+              <summary class="nav-bar-accordion">מדיה</summary>
+
+              <ul class="submenu">
+                <li class="submenu-item"><a href="video.html">וידאו</a></li>
+                <li class="submenu-item">
+                  <a href="audio.html">אודיו</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="podcasts.html">פודקאסטים</a>
+                </li>
+                <li class="submenu-item"><a href="gallery.html">גלריה</a></li>
+                <li class="submenu-item">
+                  <a href="itonut.html">עיתונות ורשת</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <a href="news.html">חדשות</a>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <a href="contact.html">קשר</a>
+          </li>
+        </ul>
+      </nav>
+      <main class="page-content">
+        <h1 class="index-page-title grainy-text">פזמונים</h1>
+        <section class="plays-index-cols">
+          <ul class="plays-col" id="c1"></ul>
+          <ul class="plays-col" id="c2"></ul>
+          <ul class="plays-col" id="c3"></ul>
+          <ul class="plays-col" id="c4"></ul>
+        </section>
+        <section class="plays-index">
+          <div class="index-content">
+            <div class="index-wrap">
+              <ul id="source-index" style="display: none">
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <h2 class="plays-index-item-title">
+                      אין מקום לשניים על עמוד חשמל
+                    </h2>
+                    <p class="plays-index-item-genre">אוסף</p>
+                    <p class="plays-index-item-frombook">
+                      {בספר: מה איכפת לציפור}
+                    </p>
+                    <p class="plays-index-item-year">1987</p>
+                  </a>
+                </li>
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <h2 class="plays-index-item-title">בוא אלי חייל נחמד</h2>
+                    <p class="plays-index-item-genre">אוסך</p>
+                    <p class="plays-index-item-frombook">
+                      {בספר: מה איכפת לציפור}
+                    </p>
+                    <p class="plays-index-item-year">1987</p>
+                  </a>
+                </li>
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <h2 class="plays-index-item-title">בלדה לעליזה מזרחי</h2>
+                    <p class="plays-index-item-year">1967</p>
+                  </a>
+                </li>
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <h2 class="plays-index-item-title">
+                      דף האחוריים של חנוך לוין
+                    </h2>
+                    <p class="plays-index-item-genre">סאטירה</p>
+                    <p class="plays-index-item-frombook">
+                      {בספר: חנוך לוין הצעיר}
+                    </p>
+                  </a>
+                </li>
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <h2 class="plays-index-item-title">הג׳יגולו מקונגו</h2>
+                    <p class="plays-index-item-genre">אוסף</p>
+                    <p class="plays-index-item-frombook">
+                      {בספר: הג׳יגולו מקונגו וטיפוסים אחרים}
+                    </p>
+                    <p class="plays-index-item-year">1988</p>
+                  </a>
+                </li>
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <h2 class="plays-index-item-title">הוי בשר, בשר, בשר</h2>
+                    <p class="plays-index-item-genre">אוסף</p>
+                    <p class="plays-index-item-frombook">
+                      {בספר: מה איכפת לציפור}
+                    </p>
+                    <p class="plays-index-item-year">1987</p>
+                  </a>
+                </li>
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <h2 class="plays-index-item-title">
+                      טורקי, טורקי, מי חלם אותך הלילה
+                    </h2>
+                    <p class="plays-index-item-genre">אוסף</p>
+                    <p class="plays-index-item-frombook">
+                      {בספר: הג׳יגולו מקונגו וטיפוסים אחרים}
+                    </p>
+                    <p class="plays-index-item-year">1994</p>
+                  </a>
+                </li>
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <h2 class="plays-index-item-title">הפזמונים הראשונים</h2>
+                    <p class="plays-index-item-genre">אוסף</p>
+                    <p class="plays-index-item-frombook">
+                      {בספר: ספר חנוך לוין הצעיר}
+                    </p>
+                    <p class="plays-index-item-year">1966</p>
+                  </a>
+                </li>
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <h2 class="plays-index-item-title">ראשונים</h2>
+                    <p class="plays-index-item-genre">אוסף</p>
+                    <p class="plays-index-item-frombook">{בספר: אחרון}</p>
+                  </a>
+                </li>
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <h2 class="plays-index-item-title">נשר שחור על גג אדום</h2>
+                    <p class="plays-index-item-genre">אוסף</p>
+                    <p class="plays-index-item-frombook">
+                      {בספר: מה איכפת לציפור}
+                    </p>
+                    <p class="plays-index-item-year">1987</p>
+                  </a>
+                </li>
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <h2 class="plays-index-item-title">שירים ופזמונים</h2>
+                    <p class="plays-index-item-genre">אוסף</p>
+                    <p class="plays-index-item-frombook">{בספר: אחרון}</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script>
+      const headers = document.querySelectorAll(".grainy-text");
+
+      headers.forEach((header) => {
+        header.addEventListener("mouseenter", () => {
+          document.getElementById("trigger-over").beginElement();
+        });
+
+        header.addEventListener("mouseleave", () => {
+          document.getElementById("trigger-out").beginElement();
+        });
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

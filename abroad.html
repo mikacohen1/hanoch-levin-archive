@@ -1,0 +1,528 @@
+!<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ארכיון חנוך לוין</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <svg
+      style="position: absolute; width: 0; height: 0"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <defs>
+        <filter id="grainy-text" x="0%" y="0%" width="100%" height="100%">
+          <feTurbulence
+            id="turb-content"
+            baseFrequency="0.9"
+            numOctaves="1"
+            type="fractalNoise"
+            result="noise"
+          />
+          <feDisplacementMap
+            id="disp-content"
+            in="SourceGraphic"
+            in2="noise"
+            scale="15"
+            xChannelSelector="R"
+            yChannelSelector="B"
+          />
+
+          <animate
+            xlink:href="#turb-content"
+            attributeName="baseFrequency"
+            from="0.9"
+            to="0.95"
+            dur="300s"
+            repeatCount="indefinite"
+          />
+          <animate
+            xlink:href="#disp-content"
+            id="trigger-out"
+            attributeName="scale"
+            from="5"
+            to="15"
+            dur="500ms"
+            fill="freeze"
+            begin="indefinite"
+          />
+        </filter>
+
+        <filter id="grainy-text-over" x="0%" y="0%" width="100%" height="100%">
+          <feTurbulence
+            baseFrequency="0.9"
+            numOctaves="1"
+            type="fractalNoise"
+            result="noise"
+          />
+          <feDisplacementMap
+            id="disp-content-over"
+            in="SourceGraphic"
+            in2="noise"
+            scale="0"
+            xChannelSelector="R"
+            yChannelSelector="B"
+          />
+
+          <animate
+            xlink:href="#disp-content-over"
+            id="trigger-over"
+            attributeName="scale"
+            from="15"
+            to="0"
+            dur="250ms"
+            fill="freeze"
+            begin="indefinite"
+          />
+        </filter>
+      </defs>
+    </svg>
+
+    <header class="site-header">
+      <nav class="breadcrumb-site-nav" aria-label="breadcrumb">
+        <ol class="breadcrumb-site-nav-list">
+          <li class="breadcrumb-item">
+            <a href="index.html">/עמוד הבית</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="abroad.html">/חו״ל</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="abroad.html">/הפקות בחו״ל</a>
+          </li>
+        </ol>
+      </nav>
+
+      <a href="index.html" class="site-logo">
+        <img src="images/logo-header.svg" alt="חנוך לוין" />
+      </a>
+    </header>
+    <div class="page-layout">
+      <nav class="site-nav" aria-label="תפריט ראשי">
+        <ul class="site-nav-list">
+          <li class="site-nav-list-item grainy-text">
+            <details name="navbar">
+              <summary class="nav-bar-accordion">טקסטים</summary>
+
+              <ul class="submenu">
+                <li class="submenu-item"><a href="texts.html">מחזות</a></li>
+                <li class="submenu-item">
+                  <a href="sketches.html">מערכונים</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="pizmonim.html">פזמונים</a>
+                </li>
+                <li class="submenu-item"><a href="proza.html">פרוזה</a></li>
+                <li class="submenu-item"><a href="shira.html">שירה</a></li>
+                <li class="submenu-item"><a href="kids.html">ילדים</a></li>
+                <li class="submenu-item">
+                  <a href="tascitim.html">תסכיתים ותסריטים</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <a href="books.html">ספרים</a>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <details name="navbar">
+              <summary class="nav-bar-accordion">הפקות</summary>
+
+              <ul class="submenu">
+                <li class="submenu-item">
+                  <a href="productions.html">הפקות</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="current-productions.html">רצות כעת</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <details name="navbar">
+              <summary class="nav-bar-accordion">חו״ל</summary>
+
+              <ul class="submenu">
+                <li class="submenu-item">
+                  <a href="abroad.html">הפקות בחו״ל</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="current-abroad.html">רצות כעת</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <a href="about.html">אודות</a>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <a href="quotes.html">מצטטים</a>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <details name="navbar">
+              <summary class="nav-bar-accordion">מדיה</summary>
+
+              <ul class="submenu">
+                <li class="submenu-item"><a href="video.html">וידאו</a></li>
+                <li class="submenu-item">
+                  <a href="audio.html">אודיו</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="podcasts.html">פודקאסטים</a>
+                </li>
+                <li class="submenu-item"><a href="gallery.html">גלריה</a></li>
+                <li class="submenu-item">
+                  <a href="itonut.html">עיתונות ורשת</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <a href="news.html">חדשות</a>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <a href="contact.html">קשר</a>
+          </li>
+        </ul>
+      </nav>
+      <main class="page-content">
+        <h1 class="index-page-title grainy-text">הפקות בחו״ל</h1>
+        <section class="plays-index-cols">
+          <ul class="plays-col" id="c1"></ul>
+          <ul class="plays-col" id="c2"></ul>
+          <ul class="plays-col" id="c3"></ul>
+          <ul class="plays-col" id="c4"></ul>
+        </section>
+        <section class="plays-index">
+          <div class="index-content">
+            <div class="index-wrap">
+              <ul id="source-index" style="display: none">
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img src=" " alt=" " class="plays-index-item-img" />
+                    <h2 class="plays-index-item-title english">
+                      SO MUCH HOPE! | QUE D’ESPOIR
+                    </h2>
+                    <p class="plays-index-item-frombook">
+                      Théâtre de l‘Atelier
+                    </p>
+                    <p class="plays-index-item-year">2025</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img src=" " alt=" " class="plays-index-item-img" />
+                    <h2 class="plays-index-item-title english">
+                      Hefetz | DINGENS (DSE)
+                    </h2>
+                    <p class="plays-index-item-frombook">
+                      Schauspiel Frankfurt
+                    </p>
+                    <p class="plays-index-item-year">2025</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img src=" " alt=" " class="plays-index-item-img" />
+                    <h2 class="plays-index-item-title english">Krum | Crumb</h2>
+                    <p class="plays-index-item-frombook">
+                      Tallinn City Theatre
+                    </p>
+                    <p class="plays-index-item-year">2025</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img src=" " alt=" " class="plays-index-item-img" />
+                    <h2 class="plays-index-item-title english">
+                      Rubber Merchants | HANDLARZE GUMEK
+                    </h2>
+                    <p class="plays-index-item-frombook">Teatr 6. piętro</p>
+                    <p class="plays-index-item-year">2024</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img src=" " alt=" " class="plays-index-item-img" />
+                    <h2 class="plays-index-item-title english">
+                      The Labour of Life | Udręka życia
+                    </h2>
+                    <p class="plays-index-item-frombook">
+                      Theater Wilam Horzyca
+                    </p>
+                    <p class="plays-index-item-year">2024</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img src=" " alt=" " class="plays-index-item-img" />
+                    <h2 class="plays-index-item-title english">
+                      Krum | Krum ajánló
+                    </h2>
+                    <p class="plays-index-item-frombook">Vígszínház</p>
+                    <p class="plays-index-item-year">2023</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img src=" " alt=" " class="plays-index-item-img" />
+                    <h2 class="plays-index-item-title english">
+                      Requiem | Réquiem
+                    </h2>
+                    <p class="plays-index-item-frombook">Area 623</p>
+                    <p class="plays-index-item-year">2023</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img src=" " alt=" " class="plays-index-item-img" />
+                    <h2 class="plays-index-item-title english">
+                      Yaacobi & Leidental
+                    </h2>
+                    <p class="plays-index-item-frombook">Odyssey Theatre</p>
+                    <p class="plays-index-item-year">2023</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img src=" " alt=" " class="plays-index-item-img" />
+                    <h2 class="plays-index-item-title english">
+                      Murder | Ubojstvo
+                    </h2>
+                    <p class="plays-index-item-frombook">HNK</p>
+                    <p class="plays-index-item-year">2023</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img src=" " alt=" " class="plays-index-item-img" />
+                    <h2 class="plays-index-item-title english">
+                      Thrill My Heart | WZRUSZ MOJE SERCE
+                    </h2>
+                    <p class="plays-index-item-frombook">Athenaeum Theater</p>
+                    <p class="plays-index-item-year">2023</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img src=" " alt=" " class="plays-index-item-img" />
+                    <h2 class="plays-index-item-title english">
+                      Winter Funeral | Zimowy pogrzeb
+                    </h2>
+                    <p class="plays-index-item-frombook">
+                      Theatre Ludwik Solski in Tarnów
+                    </p>
+                    <p class="plays-index-item-year">2022</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img src=" " alt=" " class="plays-index-item-img" />
+                    <h2 class="plays-index-item-title english">POPPER</h2>
+                    <p class="plays-index-item-frombook">
+                      THE COMPANY IN CHAIR & IN NOTES
+                    </p>
+                    <p class="plays-index-item-year">2022</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img src=" " alt=" " class="plays-index-item-img" />
+                    <h2 class="plays-index-item-title english">Krum</h2>
+                    <p class="plays-index-item-frombook">Thalia Theater</p>
+                    <p class="plays-index-item-year">2021</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img src=" " alt=" " class="plays-index-item-img" />
+                    <h2 class="plays-index-item-title english">
+                      Krum | Krumie
+                    </h2>
+                    <p class="plays-index-item-frombook">Teatr Polski</p>
+                    <p class="plays-index-item-year">2021</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img src=" " alt=" " class="plays-index-item-img" />
+                    <h2 class="plays-index-item-title english">
+                      A Winter Funeral
+                    </h2>
+                    <p class="plays-index-item-frombook">
+                      Hong Kong Arts Centre Shouson Theatre
+                    </p>
+                    <p class="plays-index-item-year">2021</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img src=" " alt=" " class="plays-index-item-img" />
+                    <h2 class="plays-index-item-title english">Krum | Крум</h2>
+                    <p class="plays-index-item-frombook">Ivan Franko Theatre</p>
+                    <p class="plays-index-item-year">2020</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img src=" " alt=" " class="plays-index-item-img" />
+                    <h2 class="plays-index-item-title english">
+                      The Labour of Life | Une Laborieuse Entreprise
+                    </h2>
+                    <p class="plays-index-item-frombook">
+                      Le Menteur Volontaire
+                    </p>
+                    <p class="plays-index-item-year">2020</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img src=" " alt=" " class="plays-index-item-img" />
+                    <h2 class="plays-index-item-title english">Requiem</h2>
+                    <p class="plays-index-item-frombook">
+                      Poly Theatre Beijing
+                    </p>
+                    <p class="plays-index-item-year">2019</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img src=" " alt=" " class="plays-index-item-img" />
+                    <h2 class="plays-index-item-title english">
+                      The Labour of Life | Popoch - Die Arbeit des Lebens
+                    </h2>
+                    <p class="plays-index-item-frombook">
+                      Co-production of NeuesTheater and TOBS
+                    </p>
+                    <p class="plays-index-item-year">2019</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img src=" " alt=" " class="plays-index-item-img" />
+                    <h2 class="plays-index-item-title english">
+                      The Child Dreams
+                    </h2>
+                    <p class="plays-index-item-frombook">
+                      The National Theater of Bitola, North Macedonia
+                    </p>
+                    <p class="plays-index-item-year">2019</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img src=" " alt=" " class="plays-index-item-img" />
+                    <h2 class="plays-index-item-title english">
+                      We are leaving
+                    </h2>
+                    <p class="plays-index-item-frombook">Nowy Teatr</p>
+                    <p class="plays-index-item-year">2018</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img src=" " alt=" " class="plays-index-item-img" />
+                    <h2 class="plays-index-item-title english">
+                      Winter Funeral | Funérailles d'hiver
+                    </h2>
+                    <p class="plays-index-item-frombook">
+                      Théâtre du Rideau de Bruxelles
+                    </p>
+                    <p class="plays-index-item-year">2018</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img src=" " alt=" " class="plays-index-item-img" />
+                    <h2 class="plays-index-item-title english">
+                      The Child Dreams | Das Kind träumt
+                    </h2>
+                    <p class="plays-index-item-frombook">
+                      Staatstheater Augsburg, Germany
+                    </p>
+                    <p class="plays-index-item-year">2018</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img src=" " alt=" " class="plays-index-item-img" />
+                    <h2 class="plays-index-item-title english">
+                      Winter Funeral | Ceremonie zimowe
+                    </h2>
+                    <p class="plays-index-item-frombook">
+                      Teatr Warsawy, Warsaw Poland
+                    </p>
+                    <p class="plays-index-item-year">2016</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img src=" " alt=" " class="plays-index-item-img" />
+                    <h2 class="plays-index-item-title english">
+                      Murder | Mord
+                    </h2>
+                    <p class="plays-index-item-frombook">
+                      Schauspiel Düsseldorf, Germany
+                    </p>
+                    <p class="plays-index-item-year">2015</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img src=" " alt=" " class="plays-index-item-img" />
+                    <h2 class="plays-index-item-title english">
+                      Jakobi and Leidental
+                    </h2>
+                    <p class="plays-index-item-frombook">Teatr Powszechny</p>
+                    <p class="plays-index-item-year">2014</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script>
+      const headers = document.querySelectorAll(".grainy-text");
+
+      headers.forEach((header) => {
+        header.addEventListener("mouseenter", () => {
+          document.getElementById("trigger-over").beginElement();
+        });
+
+        header.addEventListener("mouseleave", () => {
+          document.getElementById("trigger-out").beginElement();
+        });
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

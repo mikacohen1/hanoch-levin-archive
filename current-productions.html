@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ארכיון חנוך לוין</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <svg
+      style="position: absolute; width: 0; height: 0"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <defs>
+        <filter id="grainy-text" x="0%" y="0%" width="100%" height="100%">
+          <feTurbulence
+            id="turb-content"
+            baseFrequency="0.9"
+            numOctaves="1"
+            type="fractalNoise"
+            result="noise"
+          />
+          <feDisplacementMap
+            id="disp-content"
+            in="SourceGraphic"
+            in2="noise"
+            scale="15"
+            xChannelSelector="R"
+            yChannelSelector="B"
+          />
+
+          <animate
+            xlink:href="#turb-content"
+            attributeName="baseFrequency"
+            from="0.9"
+            to="0.95"
+            dur="300s"
+            repeatCount="indefinite"
+          />
+          <animate
+            xlink:href="#disp-content"
+            id="trigger-out"
+            attributeName="scale"
+            from="5"
+            to="15"
+            dur="500ms"
+            fill="freeze"
+            begin="indefinite"
+          />
+        </filter>
+
+        <filter id="grainy-text-over" x="0%" y="0%" width="100%" height="100%">
+          <feTurbulence
+            baseFrequency="0.9"
+            numOctaves="1"
+            type="fractalNoise"
+            result="noise"
+          />
+          <feDisplacementMap
+            id="disp-content-over"
+            in="SourceGraphic"
+            in2="noise"
+            scale="0"
+            xChannelSelector="R"
+            yChannelSelector="B"
+          />
+
+          <animate
+            xlink:href="#disp-content-over"
+            id="trigger-over"
+            attributeName="scale"
+            from="15"
+            to="0"
+            dur="250ms"
+            fill="freeze"
+            begin="indefinite"
+          />
+        </filter>
+      </defs>
+    </svg>
+    <header class="site-header">
+      <nav class="breadcrumb-site-nav" aria-label="breadcrumb">
+        <ol class="breadcrumb-site-nav-list">
+          <li class="breadcrumb-item">
+            <a href="index.html">/עמוד הבית</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="productions.html">/הפקות</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="current-productions.html">/רצות כעת</a>
+          </li>
+        </ol>
+      </nav>
+
+      <a href="index.html" class="site-logo">
+        <img src="images/logo-header.svg" alt="חנוך לוין" />
+      </a>
+    </header>
+    <div class="page-layout">
+      <nav class="site-nav" aria-label="תפריט ראשי">
+        <ul class="site-nav-list">
+          <li class="site-nav-list-item grainy-text">
+            <details name="navbar">
+              <summary class="nav-bar-accordion">טקסטים</summary>
+
+              <ul class="submenu">
+                <li class="submenu-item"><a href="texts.html">מחזות</a></li>
+                <li class="submenu-item">
+                  <a href="sketches.html">מערכונים</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="pizmonim.html">פזמונים</a>
+                </li>
+                <li class="submenu-item"><a href="proza.html">פרוזה</a></li>
+                <li class="submenu-item"><a href="shira.html">שירה</a></li>
+                <li class="submenu-item"><a href="kids.html">ילדים</a></li>
+                <li class="submenu-item">
+                  <a href="tascitim.html">תסכיתים ותסריטים</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <a href="books.html">ספרים</a>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <details name="navbar">
+              <summary class="nav-bar-accordion">הפקות</summary>
+
+              <ul class="submenu">
+                <li class="submenu-item">
+                  <a href="productions.html">הפקות</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="current-productions.html">רצות כעת</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <details name="navbar">
+              <summary class="nav-bar-accordion">חו״ל</summary>
+
+              <ul class="submenu">
+                <li class="submenu-item">
+                  <a href="abroad.html">הפקות בחו״ל</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="current-abroad.html">רצות כעת</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <a href="about.html">אודות</a>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <a href="quotes.html">מצטטים</a>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <details name="navbar">
+              <summary class="nav-bar-accordion">מדיה</summary>
+
+              <ul class="submenu">
+                <li class="submenu-item"><a href="video.html">וידאו</a></li>
+                <li class="submenu-item">
+                  <a href="audio.html">אודיו</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="podcasts.html">פודקאסטים</a>
+                </li>
+                <li class="submenu-item"><a href="gallery.html">גלריה</a></li>
+                <li class="submenu-item">
+                  <a href="itonut.html">עיתונות ורשת</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <a href="news.html">חדשות</a>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <a href="contact.html">קשר</a>
+          </li>
+        </ul>
+      </nav>
+      <main class="page-content">
+        <div class="current-productions-page-wrapper"></div>
+        <div class="productions-info">
+          <h1 class="page-title grainy-text">רצות כעת</h1>
+          <ul class="current-productions-list">
+            <li class="current-productions-list-item">
+              <p>03/01/26</p>
+              <h3>הג׳יגולו מקונגו</h3>
+              <p>התיאטרון הלאומי הבימה</p>
+              <p><a href="">לפרטים נוספים -></a></p>
+            </li>
+            <li class="current-productions-list-item">
+              <p>04/01/26</p>
+              <h3>הג׳יגולו מקונגו</h3>
+              <p>התיאטרון הלאומי הבימה</p>
+              <p><a href="">לפרטים נוספים -></a></p>
+            </li>
+            <li class="current-productions-list-item">
+              <p>13/01/26</p>
+              <h3>יעקבי ולידנטל</h3>
+              <p>תיאטרון החאן הירושלמי</p>
+              <p><a href="">לפרטים נוספים -></a></p>
+            </li>
+            <li class="current-productions-list-item">
+              <p>14/01/26</p>
+              <h3>יעקבי ולידנטל</h3>
+              <p>תיאטרון החאן הירושלמי</p>
+              <p><a href="">לפרטים נוספים -></a></p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="productions-calendar">
+          <div class="calendar-header">
+            <button class="nav-prev">▶</button>
+            <h3 class="month">ינואר</h3>
+            <button class="nav-next">◀</button>
+          </div>
+          <div class="calendar-grid">
+            <div class="day-name">א</div>
+            <div class="day-name">ב</div>
+            <div class="day-name">ג</div>
+            <div class="day-name">ד</div>
+            <div class="day-name">ה</div>
+            <div class="day-name">ו</div>
+            <div class="day-name">ש</div>
+            <!-- תאים ריקים לפני תחילת החודש -->
+            <div class="calendar-day empty"></div>
+            <div class="calendar-day empty"></div>
+            <div class="calendar-day empty"></div>
+            <div class="calendar-day empty"></div>
+
+            <!-- ימים -->
+            <div class="calendar-day">1</div>
+            <div class="calendar-day">2</div>
+            <div class="calendar-day active">3</div>
+            <div class="calendar-day active">4</div>
+            <div class="calendar-day">5</div>
+            <div class="calendar-day">6</div>
+            <div class="calendar-day">7</div>
+            <div class="calendar-day">8</div>
+            <div class="calendar-day">9</div>
+            <div class="calendar-day">10</div>
+            <div class="calendar-day">11</div>
+            <div class="calendar-day">12</div>
+            <div class="calendar-day active">13</div>
+            <div class="calendar-day active">14</div>
+            <div class="calendar-day">15</div>
+            <div class="calendar-day">16</div>
+            <div class="calendar-day">17</div>
+            <div class="calendar-day">18</div>
+            <div class="calendar-day">19</div>
+            <div class="calendar-day">20</div>
+            <div class="calendar-day">21</div>
+            <div class="calendar-day">22</div>
+            <div class="calendar-day">23</div>
+            <div class="calendar-day">24</div>
+            <div class="calendar-day">25</div>
+            <div class="calendar-day">26</div>
+            <div class="calendar-day">27</div>
+            <div class="calendar-day">28</div>
+            <div class="calendar-day">29</div>
+            <div class="calendar-day">30</div>
+            <div class="calendar-day">31</div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script>
+      const headers = document.querySelectorAll(".grainy-text");
+
+      headers.forEach((header) => {
+        header.addEventListener("mouseenter", () => {
+          document.getElementById("trigger-over").beginElement();
+        });
+
+        header.addEventListener("mouseleave", () => {
+          document.getElementById("trigger-out").beginElement();
+        });
+      });
+    </script>
+  </body>
+</html>

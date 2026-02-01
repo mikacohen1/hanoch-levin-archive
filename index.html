@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ארכיון חנוך לוין</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <svg
+      style="position: absolute; width: 0; height: 0"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <defs>
+        <filter id="grainy-text" x="0%" y="0%" width="100%" height="100%">
+          <feTurbulence
+            id="turb-content"
+            baseFrequency="0.9"
+            numOctaves="1"
+            type="fractalNoise"
+            result="noise"
+          />
+          <feDisplacementMap
+            id="disp-content"
+            in="SourceGraphic"
+            in2="noise"
+            scale="15"
+            xChannelSelector="R"
+            yChannelSelector="B"
+          />
+
+          <animate
+            xlink:href="#turb-content"
+            attributeName="baseFrequency"
+            from="0.9"
+            to="0.95"
+            dur="300s"
+            repeatCount="indefinite"
+          />
+          <animate
+            xlink:href="#disp-content"
+            id="trigger-out"
+            attributeName="scale"
+            from="5"
+            to="15"
+            dur="500ms"
+            fill="freeze"
+            begin="indefinite"
+          />
+        </filter>
+
+        <filter id="grainy-text-over" x="0%" y="0%" width="100%" height="100%">
+          <feTurbulence
+            baseFrequency="0.9"
+            numOctaves="1"
+            type="fractalNoise"
+            result="noise"
+          />
+          <feDisplacementMap
+            id="disp-content-over"
+            in="SourceGraphic"
+            in2="noise"
+            scale="0"
+            xChannelSelector="R"
+            yChannelSelector="B"
+          />
+
+          <animate
+            xlink:href="#disp-content-over"
+            id="trigger-over"
+            attributeName="scale"
+            from="15"
+            to="0"
+            dur="250ms"
+            fill="freeze"
+            begin="indefinite"
+          />
+        </filter>
+      </defs>
+    </svg>
+    <header class="site-header">
+      <a href="index.html" class="site-logo">
+        <img src="images/logo-header.svg" alt="חנוך לוין" />
+      </a>
+    </header>
+    <div class="page-layout">
+      <nav class="site-nav" aria-label="תפריט ראשי">
+        <ul class="site-nav-list">
+          <li class="site-nav-list-item grainy-text">
+            <details name="navbar">
+              <summary class="nav-bar-accordion">טקסטים</summary>
+
+              <ul class="submenu">
+                <li class="submenu-item"><a href="texts.html">מחזות</a></li>
+                <li class="submenu-item">
+                  <a href="sketches.html">מערכונים</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="pizmonim.html">פזמונים</a>
+                </li>
+                <li class="submenu-item"><a href="proza.html">פרוזה</a></li>
+                <li class="submenu-item"><a href="shira.html">שירה</a></li>
+                <li class="submenu-item"><a href="kids.html">ילדים</a></li>
+                <li class="submenu-item">
+                  <a href="tascitim.html">תסכיתים ותסריטים</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <a href="books.html">ספרים</a>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <details name="navbar">
+              <summary class="nav-bar-accordion">הפקות</summary>
+
+              <ul class="submenu">
+                <li class="submenu-item">
+                  <a href="productions.html">הפקות</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="current-productions.html">רצות כעת</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <details name="navbar">
+              <summary class="nav-bar-accordion">חו״ל</summary>
+
+              <ul class="submenu">
+                <li class="submenu-item">
+                  <a href="abroad.html">הפקות בחו״ל</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="current-abroad.html">רצות כעת</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <a href="about.html">אודות</a>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <a href="quotes.html">מצטטים</a>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <details name="navbar">
+              <summary class="nav-bar-accordion">מדיה</summary>
+
+              <ul class="submenu">
+                <li class="submenu-item"><a href="video.html">וידאו</a></li>
+                <li class="submenu-item">
+                  <a href="audio.html">אודיו</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="podcasts.html">פודקאסטים</a>
+                </li>
+                <li class="submenu-item"><a href="gallery.html">גלריה</a></li>
+                <li class="submenu-item">
+                  <a href="itonut.html">עיתונות ורשת</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <a href="news.html">חדשות</a>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <a href="contact.html">קשר</a>
+          </li>
+        </ul>
+      </nav>
+      <main class="page-content">
+        <h1 class="homepage-title grainy-text">ארכיון <br />חנוך לוין</h1>
+        <section class="homepage-floating-layout">
+          <div class="floating-layout img a">
+            <img
+              src="images/plays/hanashim-haavudot1.jpg"
+              alt="הנשים האבודות מטרויה"
+            />
+          </div>
+          <div class="floating-layout img c">
+            <img src="images/plays/ketchup1.jpg" alt="קטשופ" />
+          </div>
+          <div class="floating-layout text b">
+            חנוך לוין הוא בלי ספק גדול מחזאי ישראל, ואחד היוצרים החשובים
+            והמגוּונים ביותר בתרבות העברית עד היום. יצירתו כוללת מגוון רחב מאוד
+            של ז'אנרים ספרותיים – מחזות קומיים וטראגיים, קבּרטים סאטיריים,
+            סיפורים וקטעי פרוזה, שירים ופזמונים, מערכונים, תסכיתי רדיו ותסריטים.
+          </div>
+          <div class="floating-layout img d">
+            <img
+              src="images/plays/hazona-hagdola1.jpg"
+              alt="הזונה הגדולה מבבל"
+            />
+          </div>
+
+          <div class="floating-layout img e">
+            <img src="images/plays/neurei-vardile1.jpg" alt="נעורי ורדילה" />
+          </div>
+
+          <div class="floating-layout img f">
+            <img
+              src="images/plays/yaakobi-velidental1.jpg"
+              alt="יעקבי ולידנטל"
+            />
+          </div>
+
+          <div class="floating-layout img g">
+            <img
+              src="images/plays/haisha-hamuflaa1.jpg"
+              alt="האישה המופלאה שבתוכנו"
+            />
+          </div>
+
+          <div class="floating-layout img h">
+            <img src="" alt="" />
+          </div>
+        </section>
+      </main>
+    </div>
+    <script>
+      var acc = document.getElementsByClassName("nav-bar-accordion");
+      var i;
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+    </script>
+    <script>
+      const headers = document.querySelectorAll(".grainy-text");
+
+      headers.forEach((header) => {
+        header.addEventListener("mouseenter", () => {
+          document.getElementById("trigger-over").beginElement();
+        });
+
+        header.addEventListener("mouseleave", () => {
+          document.getElementById("trigger-out").beginElement();
+        });
+      });
+    </script>
+  </body>
+</html>

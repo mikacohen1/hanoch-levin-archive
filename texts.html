@@ -1,0 +1,1099 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ארכיון חנוך לוין</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <svg
+      style="position: absolute; width: 0; height: 0"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <defs>
+        <filter id="grainy-text" x="0%" y="0%" width="100%" height="100%">
+          <feTurbulence
+            id="turb-content"
+            baseFrequency="0.9"
+            numOctaves="1"
+            type="fractalNoise"
+            result="noise"
+          />
+          <feDisplacementMap
+            id="disp-content"
+            in="SourceGraphic"
+            in2="noise"
+            scale="15"
+            xChannelSelector="R"
+            yChannelSelector="B"
+          />
+
+          <animate
+            xlink:href="#turb-content"
+            attributeName="baseFrequency"
+            from="0.9"
+            to="0.95"
+            dur="300s"
+            repeatCount="indefinite"
+          />
+          <animate
+            xlink:href="#disp-content"
+            id="trigger-out"
+            attributeName="scale"
+            from="5"
+            to="15"
+            dur="500ms"
+            fill="freeze"
+            begin="indefinite"
+          />
+        </filter>
+
+        <filter id="grainy-text-over" x="0%" y="0%" width="100%" height="100%">
+          <feTurbulence
+            baseFrequency="0.9"
+            numOctaves="1"
+            type="fractalNoise"
+            result="noise"
+          />
+          <feDisplacementMap
+            id="disp-content-over"
+            in="SourceGraphic"
+            in2="noise"
+            scale="0"
+            xChannelSelector="R"
+            yChannelSelector="B"
+          />
+
+          <animate
+            xlink:href="#disp-content-over"
+            id="trigger-over"
+            attributeName="scale"
+            from="15"
+            to="0"
+            dur="250ms"
+            fill="freeze"
+            begin="indefinite"
+          />
+        </filter>
+      </defs>
+    </svg>
+    <header class="site-header">
+      <nav class="breadcrumb-site-nav" aria-label="breadcrumb">
+        <ol class="breadcrumb-site-nav-list">
+          <li class="breadcrumb-item">
+            <a href="index.html">/עמוד הבית</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="texts.html">/טקסטים</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="texts.html">/מחזות</a>
+          </li>
+        </ol>
+      </nav>
+
+      <a href="index.html" class="site-logo">
+        <img src="images/logo-header.svg" alt="חנוך לוין" />
+      </a>
+    </header>
+    <div class="page-layout">
+      <nav class="site-nav" aria-label="תפריט ראשי">
+        <ul class="site-nav-list">
+          <li class="site-nav-list-item grainy-text">
+            <details name="navbar">
+              <summary class="nav-bar-accordion">טקסטים</summary>
+
+              <ul class="submenu">
+                <li class="submenu-item"><a href="texts.html">מחזות</a></li>
+                <li class="submenu-item">
+                  <a href="sketches.html">מערכונים</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="pizmonim.html">פזמונים</a>
+                </li>
+                <li class="submenu-item"><a href="proza.html">פרוזה</a></li>
+                <li class="submenu-item"><a href="shira.html">שירה</a></li>
+                <li class="submenu-item"><a href="kids.html">ילדים</a></li>
+                <li class="submenu-item">
+                  <a href="tascitim.html">תסכיתים ותסריטים</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <a href="books.html">ספרים</a>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <details name="navbar">
+              <summary class="nav-bar-accordion">הפקות</summary>
+
+              <ul class="submenu">
+                <li class="submenu-item">
+                  <a href="productions.html">הפקות</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="current-productions.html">רצות כעת</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <details name="navbar">
+              <summary class="nav-bar-accordion">חו״ל</summary>
+
+              <ul class="submenu">
+                <li class="submenu-item">
+                  <a href="abroad.html">הפקות בחו״ל</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="current-abroad.html">רצות כעת</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <a href="about.html">אודות</a>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <a href="quotes.html">מצטטים</a>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <details name="navbar">
+              <summary class="nav-bar-accordion">מדיה</summary>
+
+              <ul class="submenu">
+                <li class="submenu-item"><a href="video.html">וידאו</a></li>
+                <li class="submenu-item">
+                  <a href="audio.html">אודיו</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="podcasts.html">פודקאסטים</a>
+                </li>
+                <li class="submenu-item"><a href="gallery.html">גלריה</a></li>
+                <li class="submenu-item">
+                  <a href="itonut.html">עיתונות ורשת</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <a href="news.html">חדשות</a>
+          </li>
+          <li class="site-nav-list-item grainy-text">
+            <a href="contact.html">קשר</a>
+          </li>
+        </ul>
+      </nav>
+      <main class="page-content">
+        <h1 class="index-page-title grainy-text">מחזות</h1>
+        <section class="plays-index-cols">
+          <ul class="plays-col" id="c1"></ul>
+          <ul class="plays-col" id="c2"></ul>
+          <ul class="plays-col" id="c3"></ul>
+          <ul class="plays-col" id="c4"></ul>
+        </section>
+        <section class="plays-index">
+          <div class="index-content">
+            <div class="index-wrap">
+              <ul id="source-index" style="display: none">
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img
+                      src="images/plays/ichesh-pisher1.jpeg"
+                      alt="איחש פישר"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">איחש פישר</h2>
+                    <p class="plays-index-item-genre">קומדיה</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: החייל הרזה ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1999</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <h2 class="plays-index-item-title">אלמו ורות</h2>
+                    <p class="plays-index-item-genre">?</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: משפט אונס ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1989</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img
+                      src="images/plays/ashcava1.jpg"
+                      alt="אשכבה"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">אשכבה</h2>
+                    <p class="plays-index-item-genre">דרמה</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: אשכבה ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1998</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="texts-at-vaani.html" class="plays-index-item rotate">
+                    <img
+                      src="images/plays/at-veani-vehamilchama1.jpg"
+                      alt="את ואני והמלחמה הבאה"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">את ואני והמלחמה הבאה</h2>
+                    <p class="plays-index-item-genre">סאטירה</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: מה איכפת לציפור}
+                    </p>
+                    <p class="plays-index-item-year">1967</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img
+                      src="images/plays/geula.jpg"
+                      alt="גאולה"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">גאולה</h2>
+                    <p class="plays-index-item-genre">מיתוס</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: הנאחזים ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1993</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item rotate2">
+                    <h2 class="plays-index-item-title">האיש עם הסכין באמצע</h2>
+                    <p class="plays-index-item-genre">מיתוס</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: משפט אונס ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1990</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item rotate">
+                    <img
+                      src="images/plays/haisha-hamuflaa1.jpg"
+                      alt="האישה המופלאה שבתוכנו"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">
+                      האישה המופלאה שבתוכנו
+                    </h2>
+                    <p class="plays-index-item-genre">קומדיה</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: הזונה מאוהיו ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1992</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img
+                      src="images/plays/habachyanim1.jpg"
+                      alt="הבכיינים"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">הבכיינים</h2>
+                    <p class="plays-index-item-genre">קומדיה | מיתוס</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: החייל הרזה ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1998</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item rotate2">
+                    <img
+                      src="images/plays/hajigolo-mekongo1.jpg"
+                      alt="הג׳יגולו מקונגו"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">הג'יגולו מקונגו</h2>
+                    <p class="plays-index-item-genre">אוסף</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: הג'יגולו מקונגו וטיפוסים אחרים}
+                    </p>
+                    <p class="plays-index-item-year">1988</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img
+                      src="images/plays/haholchim-bachoshech1.jpg"
+                      alt="ההולכים בחושך"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">ההולכים בחושך</h2>
+                    <p class="plays-index-item-genre">קומדיה</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: ההולכים בחושך ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1992</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img
+                      src="images/plays/hops-vehopala.jpg"
+                      alt="הופס והופלה"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">הופס והופלה</h2>
+                    <p class="plays-index-item-genre">קומדיה</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: הזונה מאוהיו ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1988</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item rotate">
+                    <img
+                      src="images/plays/hotzaa-lahoreg1.jpg"
+                      alt="הוצאה להורג"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">הוצאה להורג</h2>
+                    <p class="plays-index-item-genre">מיתוס</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: ייסורי איוב ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1977</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item rotate2">
+                    <img
+                      src="images/plays/hazona-hagdola1.jpg"
+                      alt="הזונה הגדולה מבבל"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">הזונה הגדולה מבבל</h2>
+                    <p class="plays-index-item-genre">מיתוס</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: ייסורי איוב ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1980</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img
+                      src="images/plays/hazona-meohio1.jpg"
+                      alt="הזונה מאוהיו"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">הזונה מאוהיו</h2>
+                    <p class="plays-index-item-genre">קומדיה</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: הזונה מאוהיו ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1978</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item rotate">
+                    <img
+                      src="images/plays/hahayal-haraze1.jpg"
+                      alt="החייל הרזה"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">החייל הרזה</h2>
+                    <p class="plays-index-item-genre">דרמה</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: החייל הרזה ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1998</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="texts-at-vaani.html" class="plays-index-item">
+                    <img
+                      src="images/plays/hayeled-holem1.jpg"
+                      alt="הילד חולם"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">הילד חולם</h2>
+                    <p class="plays-index-item-genre">?</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: מלאכת החיים ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1986</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <h2 class="plays-index-item-title">הכובש</h2>
+                    <p class="plays-index-item-genre">מיתוס</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: הזונה מאוהיו ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1992</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item rotate2">
+                    <img
+                      src="images/plays/halvaya-horpit1.jpg"
+                      alt="הלוויה חורפית"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">הלוויה חורפית</h2>
+                    <p class="plays-index-item-genre">קומדיה</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: סוחרי גומי ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1977</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <h2 class="plays-index-item-title">המביט</h2>
+                    <p class="plays-index-item-genre">מיתוס</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: החייל הרזה ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1999</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <h2 class="plays-index-item-title">המדמה</h2>
+                    <p class="plays-index-item-genre">מיתוס</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: ההולכים בחושך ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1983</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item rotate2">
+                    <img
+                      src="images/plays/hamitlabet.jpg"
+                      alt="המתלבט"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">המתלבט</h2>
+                    <p class="plays-index-item-genre">קומדיה</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: מלאכת החיים ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1983</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <h2 class="plays-index-item-title">הנאחזים</h2>
+                    <p class="plays-index-item-genre">?</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: הנאחזים ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1996</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img
+                      src="images/plays/hanashim-haavudot1.jpg"
+                      alt="הנשים האבודות מטרויה"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">הנשים האבודות מטרויה</h2>
+                    <p class="plays-index-item-genre">מיתוס</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: ייסורי איוב ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1981</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img
+                      src="images/plays/hapatriot1.jpg"
+                      alt="הפטריוט"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">הפטריוט</h2>
+                    <p class="plays-index-item-genre">?</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: מה איכפת לציפור}
+                    </p>
+                    <p class="plays-index-item-year">1982</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <h2 class="plays-index-item-title">הקיסר</h2>
+                    <p class="plays-index-item-genre">מיתוס</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: מתאבל ללא קץ ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1996</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item rotate">
+                    <h2 class="plays-index-item-title">הקיסר גוק</h2>
+                    <p class="plays-index-item-genre">מיתוס</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: אשכבה ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1997</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img
+                      src="images/plays/hartiti-et-libi1.jpg"
+                      alt="הרטיטי את ליבי"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">הרטיטי את לבי</h2>
+                    <p class="plays-index-item-genre">קומדיה</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: החייל הרזה ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1993</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <h2 class="plays-index-item-title">השמשים</h2>
+                    <p class="plays-index-item-genre">מיתוס</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: מתאבל ללא קץ ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1996</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item rotate">
+                    <h2 class="plays-index-item-title">ונשיקה לדודה</h2>
+                    <p class="plays-index-item-genre">?</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: הנאחזים ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1996</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item rotate2">
+                    <h2 class="plays-index-item-title">חייב להיענש</h2>
+                    <p class="plays-index-item-genre">קומדיה</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: ההולכים בחושך ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1991</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item rotate">
+                    <img
+                      src="images/plays/hefetz1.jpg"
+                      alt="חפץ"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">חפץ</h2>
+                    <p class="plays-index-item-genre">קומדיה</p>
+                    <p class="plays-index-item-frombook">{מהספר: חפץ ואחרים}</p>
+                    <p class="plays-index-item-year">1970</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <h2 class="plays-index-item-title">חרד ומבוהל</h2>
+                    <p class="plays-index-item-genre">?</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: משפט אונס ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1985</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img
+                      src="images/plays/yakish-vepopcha1.jpg"
+                      alt="יאקיש ופּוּפּצֶ׳ה"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">יאקיש ופּוּפּצֶ'ה</h2>
+                    <p class="plays-index-item-genre">קומדיה</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: מלאכת החיים ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1982</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img
+                      src="images/plays/yisorei-eiov1.jpg"
+                      alt="ייסורי איוב"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">ייסורי איוב</h2>
+                    <p class="plays-index-item-genre">מיתוס</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: ייסורי איוב ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1979</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item rotate">
+                    <img
+                      src="images/plays/yaakobi-velidental1.jpg"
+                      alt="יעקבי ולידנטל"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">
+                      יעקובי ולידנטל [שם זמני]
+                    </h2>
+                    <p class="plays-index-item-genre">קומדיה</p>
+                    <p class="plays-index-item-frombook">{מהספר: חפץ ואחרים}</p>
+                    <p class="plays-index-item-year">1970</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img
+                      src="images/plays/kulam-rotzhim-lihiot1.jpeg"
+                      alt="כולם רוצים לחיות"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">כולם רוצים לחיות</h2>
+                    <p class="plays-index-item-genre">קומדיה</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: ייסורי איוב ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1981</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <h2 class="plays-index-item-title">כל הנערים</h2>
+                    <p class="plays-index-item-genre">מיתוס</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: אשכבה ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1990</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <h2 class="plays-index-item-title">כלודוג המלך האומלל</h2>
+                    <p class="plays-index-item-genre">מיתוס</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: הנאחזים ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1996</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img
+                      src="images/plays/critat-rosh1.jpg"
+                      alt="כריתת ראש"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">כריתת ראש</h2>
+                    <p class="plays-index-item-genre">מיתוס</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: משפט אונס ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1988</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <h2 class="plays-index-item-title">מבויש עד תום</h2>
+                    <p class="plays-index-item-genre">קומדיה</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: מתאבל ללא קץ ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1990</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item rotate">
+                    <img
+                      src="images/plays/moris-shimel1.jpg"
+                      alt="מוריס שימל"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">מוריס שימל</h2>
+                    <p class="plays-index-item-genre">קומדיה</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: החייל הרזה ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1998</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img
+                      src="images/plays/malechet-hachaim1.jpg"
+                      alt="מלאכת החיים"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">מלאכת החיים</h2>
+                    <p class="plays-index-item-genre">קומדיה</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: מלאכת החיים ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1980</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img
+                      src="images/plays/malkat-ambatia1.jpg"
+                      alt="מלכת אמבטיה"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">מלכת אמבטיה</h2>
+                    <p class="plays-index-item-genre">?</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: מה איכפת לציפור}
+                    </p>
+                    <p class="plays-index-item-year">1969</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item rotate">
+                    <h2 class="plays-index-item-title">משפט אונס</h2>
+                    <p class="plays-index-item-genre">מיתוס</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: משפט אונס ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1989</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <h2 class="plays-index-item-title">
+                      משרת מסור לגברת מחמירה
+                    </h2>
+                    <p class="plays-index-item-genre">?</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: אשכבה ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1997</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img
+                      src="images/plays/mitabel-lelo-ketz1.jpg"
+                      alt="מתאבל ללא קץ"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">מתאבל ללא קץ</h2>
+                    <p class="plays-index-item-genre">קומדיה | מיתוס</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: מתאבל ללא קץ ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1992</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img
+                      src="images/plays/nichna-umenutzach1.jpg"
+                      alt="נכנע ומנוצח"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">נכנע ומנוצח</h2>
+                    <p class="plays-index-item-genre">קומדיה</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: מלאכת החיים ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1986</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item rotate">
+                    <img
+                      src="images/plays/neurei-vardile1.jpg"
+                      alt="נעורי ורדהלה"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">נעורי ורדה'לה</h2>
+                    <p class="plays-index-item-genre">קומדיה</p>
+                    <p class="plays-index-item-frombook">{מהספר: חפץ ואחרים}</p>
+                    <p class="plays-index-item-year">1972</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img
+                      src="images/plays/sochari-gumi1.jpg"
+                      alt="סוחרי גומי"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">סוחרי גומי</h2>
+                    <p class="plays-index-item-genre">קומדיה</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: סוחרי גומי ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1977</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img
+                      src="images/plays/solomon-grip1.jpg"
+                      alt="סולומון גריפ"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">סולומון גריפ</h2>
+                    <p class="plays-index-item-genre">קומדיה</p>
+                    <p class="plays-index-item-frombook">{מהספר: חפץ ואחרים}</p>
+                    <p class="plays-index-item-year">1968</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item rotate">
+                    <h2 class="plays-index-item-title">עווית והתפתלות</h2>
+                    <p class="plays-index-item-genre">מיתוס</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: הנאחזים ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1997</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img
+                      src="images/plays/poper1.jpg"
+                      alt="פופר"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">פופר</h2>
+                    <p class="plays-index-item-genre">קומדיה</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: סוחרי גומי ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1975</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item rotate">
+                    <img
+                      src="images/plays/peurei-peh1.jpg"
+                      alt=" פעורי-פה"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">פעורי-פה</h2>
+                    <p class="plays-index-item-genre">מיתוס</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: הזונה מאוהיו ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1993</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img
+                      src="images/plays/ketchup1.jpg"
+                      alt="קטשופ"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">קטשופ</h2>
+                    <p class="plays-index-item-genre">סאטירה</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: מה איכפת לציפור}
+                    </p>
+                    <p class="plays-index-item-year">1969</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item rotate">
+                    <img
+                      src="images/plays/krum1.jpg"
+                      alt="קרום"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">קרום</h2>
+                    <p class="plays-index-item-genre">קומדיה</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: סוחרי גומי ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1972</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img
+                      src="images/plays/ravakim-veravakot1.jpg"
+                      alt="רווקים ורווקות"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">רווקים ורווקות</h2>
+                    <p class="plays-index-item-genre">קומדיה</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: ההולכים בחושך ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1985</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img
+                      src="images/plays/romantikaim1.jpg"
+                      alt="רומנטיקאים"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">רומנטיקאים</h2>
+                    <p class="plays-index-item-genre">דרמה</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: אשכבה ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1997</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item rotate">
+                    <img
+                      src="images/plays/retzach1.jpg"
+                      alt="רצח"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">רצח</h2>
+                    <p class="plays-index-item-genre">סאטירה</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: ההולכים בחושך ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1995</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img
+                      src="images/plays/shozes-vebzazina1.jpg"
+                      alt="שוזס ובזזינה"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">שוזס ובז'ז'ינה</h2>
+                    <p class="plays-index-item-genre">קומדיה</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: מתאבל ללא קץ ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1992</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <img
+                      src="images/plays/shitz1.jpg"
+                      alt="שיץ"
+                      class="plays-index-item-img"
+                    />
+                    <h2 class="plays-index-item-title">שיץ</h2>
+                    <p class="plays-index-item-genre">קומדיה</p>
+                    <p class="plays-index-item-frombook">{מהספר: חפץ ואחרים}</p>
+                    <p class="plays-index-item-year">1974</p>
+                  </a>
+                </li>
+
+                <li class="plays-index-list-item">
+                  <a href="play-name.index" class="plays-index-item">
+                    <h2 class="plays-index-item-title">תיאופנו היפה</h2>
+                    <p class="plays-index-item-genre">מיתוס</p>
+                    <p class="plays-index-item-frombook">
+                      {מהספר: החייל הרזה ואחרים}
+                    </p>
+                    <p class="plays-index-item-year">1998</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      const headers = document.querySelectorAll(".grainy-text");
+
+      headers.forEach((header) => {
+        header.addEventListener("mouseenter", () => {
+          document.getElementById("trigger-over").beginElement();
+        });
+
+        header.addEventListener("mouseleave", () => {
+          document.getElementById("trigger-out").beginElement();
+        });
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
