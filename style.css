@@ -26,6 +26,7 @@ a { /* No blue links! */
     text-decoration: none;
 }
 
+
 @font-face {
     font-family: "VC_David";
     font-weight: bold;
@@ -50,7 +51,7 @@ background-color: whitesmoke;
 }
 
 .site-header{
-    height: 100px;
+    height: 15vh;
     display: flex;
     align-items: center;
     justify-content: left;
@@ -60,10 +61,14 @@ background-color: whitesmoke;
 }
 
 .site-logo img{
-    height: 2.5rem;
-    top: 50%;
-    transform: translateY(-50%);
+    height: 3rem;
     margin-left: 2rem;
+    transition: transform 0.5s ease;
+
+}
+
+.site-logo img:hover{
+    transform: scale(1.1);
 
 }
 
@@ -74,7 +79,7 @@ background-color: whitesmoke;
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 6px;
+  gap: 1rem;
 
 }
 
@@ -85,7 +90,7 @@ background-color: whitesmoke;
     transform: translateY(-50%);
     right: 2rem;
     font-family: "80-kb-Sharp";
-    font-size: 8pt;
+    font-size: 0.8rem;
     color: rgb(102, 102, 102);
 
 }
@@ -97,8 +102,8 @@ transition: ease-in;
 }
 
 .page-layout {
-    gap: 40px;
-    padding: 20px;
+    padding:0 20px 20px 20px;
+    max-width: 100%;
 
 }
 
@@ -124,7 +129,7 @@ summary::-webkit-details-marker {
    width: 120px;
    position: fixed;
    right: 2rem;
-   top: 120px;
+   top: 15vh;
    
   
 }
@@ -134,7 +139,7 @@ summary::-webkit-details-marker {
     flex-direction: column;
     gap: 1rem;
     list-style: none;
-       cursor: pointer;
+    cursor: pointer;
 
 }
 
@@ -173,7 +178,6 @@ summary::-webkit-details-marker {
     display: flex;
     align-items: flex-start;
     flex-direction: row;
-    gap: 2rem;
     padding: 0 20px 20px 20px;
    
 }
@@ -181,9 +185,9 @@ summary::-webkit-details-marker {
 h1.homepage-title {
     font-family: "VC_David";
     font-weight: bold;
-    font-size: clamp(8rem, 16vw, 14rem);;
-    line-height: 10rem;
-    letter-spacing: -18px;
+    font-size: clamp(6rem, 12vw, 12rem);
+    line-height: 0.8;
+    letter-spacing:clamp(-18px, -1.4vw, -8px);
     margin: 4rem;
     margin-top: 0;
     position: fixed;
@@ -196,10 +200,11 @@ h1.index-page-title {
     font-family: "VC_David";
     font-weight: bold;
     font-size: clamp(6rem, 12vw, 12rem);
-    line-height: 10rem;
+    line-height: 0.9
+    ;
     letter-spacing: clamp(-18px, -1.4vw, -8px);
     position: sticky;
-    top: 120px;
+    top: 15vh;
     max-width: 250px;
     z-index: 0;
     
@@ -216,7 +221,7 @@ h1.index-page-title {
 
 
 .floating-layout.img img {
-    max-width: 200px;
+    max-width: 300px;
     width: 100%;
     display: block;
     animation: subtleFloat 7s ease-in-out infinite, appear linear;
@@ -296,15 +301,13 @@ h1.index-page-title {
 }
 
 h1.page-title {
-    flex: 1;
     font-family: "VC_David";
     font-weight: bold;
     font-size: 6rem;
-    line-height: 4rem;
+    line-height: 0.9;
     letter-spacing: -10px;
     position: sticky;
-    top: 120px;
-    max-width: 250px;
+    top: 15vh;
 
 }
 
@@ -312,9 +315,8 @@ h1.play-page-title {
     font-family: "VC_David";
     font-weight: bold;
     font-size: clamp(3rem, 6vw, 6rem);
-    line-height: 4rem;
-    letter-spacing: -clamp(-10px, -1vw, -2px);
-    max-width: 250px;
+    line-height: 0.8;
+    letter-spacing: clamp(-10px, -1vw, -2px);
     
 
 }
@@ -341,18 +343,42 @@ h1.play-page-title {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
     position: sticky;
-    top: 130px;
+    top: 15vh;
 }
 
-/*.plays-index {
+.banner-subs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.char-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.char-list-accordion {
+    font-family: "80-kb-Sharp";
+    font-size: 1rem;
+    color: rgb(102, 102, 102);
+    transition: color 0.3s ease;
+}
+
+.char-list-accordion:hover {
+    color: black;
+}
+
+.video-index {
     flex: 2;
     column-count: 4;
     column-gap: 1rem;
     width: 100%;
 
-}*/
+}
 
 /*.plays-index {
     flex: 2;
@@ -460,14 +486,14 @@ h4 {
 
 
 
-
+/*
 .rotate {
     transform: rotate(2deg);
 }
 
 .rotate2 {
     transform: rotate(-0.8deg);
-}
+}*/
 
 
 
@@ -481,12 +507,21 @@ h2 {
 h3 {
     font-family: "VC_David";
     font-size: 1.5rem;
-    letter-spacing: -2px;
+    letter-spacing: -0.5px;
 }
 
 p {
     font-family: "80-kb-Sharp";
-    font-size: 0.8rem;
+    font-size: 1rem;
+}
+
+p a {
+    color: rgb(102, 102, 102);
+    transition: color 0.3s ease;
+}
+
+p a:hover{
+    color: black;
 }
 
 .characters {
@@ -498,7 +533,7 @@ p {
 
 dd {
    font-family: "80-kb-Sharp";
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 dt {
@@ -521,7 +556,7 @@ dt {
 
 h3.play-script-part-header {
     position: sticky;
-    top: 130px;
+    top: 15vh;
     z-index: 1000;
 
 }
@@ -560,11 +595,61 @@ h3.play-script-part-header {
     font-size: 0.8rem;
 }
 
+button {
+  all: unset;
+  cursor: pointer;
+  color:  rgb(102, 102, 102);
+}
+
+.current-productions-page-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 8rem;
+    
+}
+
+.productions-info {
+    flex: 1;
+    display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  
+}
+
+.current-productions-list {
+    font-family: "80-kb-Sharp";
+    font-size: 1rem;
+    line-height: 1.6rem;
+}
+
+.productions-calendar {
+    flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-inline: auto;
+  align-items: center;
+
+  
+}
+
+.calendar-header {
+    
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-inline: auto;
+
+}
+
 .calendar-grid {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 2.5rem;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: clamp(1rem, 2.5rem, 2.5rem);
     direction: rtl;
+    width: 100%;
 }
 .day-name {
     font-family: "80-kb-Sharp";
@@ -577,58 +662,15 @@ h3.play-script-part-header {
     font-family: "VC_David";
     font-weight: bold;
     color:  rgb(102, 102, 102);
-    font-size: 2rem;
-    letter-spacing: -4px;
+    font-size: 3rem;
+    letter-spacing: -1px;
 }
 
 .active {
     color: black;
 }
 
-button {
-  all: unset;
-  cursor: pointer;
-  color:  rgb(102, 102, 102);
-}
 
-.current-productions-page-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 4rem;
-    
-}
-
-.productions-info {
-    flex: 1;
-    display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.current-productions-list {
-    gap: 2rem;
-    font-family: "80-kb-Sharp";
-    font-size: 1rem;
-    line-height: 1.6rem;
-}
-.calendar-header {
-    
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    margin-inline: auto;
-
-}
-
-.productions-calendar {
-    flex: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-inline: auto;
-  
-}
 
 .quotes-archive-content {
     column-count: 4;
@@ -650,7 +692,6 @@ button {
     display: block;
     
 
-
 }
 
 .quotes-archive-content-item img:hover .overlay {
@@ -665,18 +706,15 @@ button {
     align-items: flex-start;
     gap: 4rem;
     margin-left: 4rem;
-    
-    
 }
 
 .about-sidebar {
     flex: 1;
     position: sticky;
-    top: 130px;
+    top: 15vh;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    max-width: 350px;
 }
 
 .main-quotation {
@@ -690,7 +728,6 @@ button {
     display: flex;
     flex: 2;
     flex-direction: column;
-max-width: 650px;
     font-family: "80-kb-Sharp";
     line-height: 1.6;
     gap: 2rem;
@@ -698,7 +735,7 @@ max-width: 650px;
 
 h3.script-header {
     position: sticky;
-    top: 130px;
+    top: 15vh;
     z-index: 1000;
 }
 
@@ -760,29 +797,85 @@ line-height: 1rem;
 }
 
 @media (max-width: 1024px) {
+     .site-header{
+        height: 15vh;
+
+    }
   
     
     .page-content {
         display: flex;
         flex-direction: column;
         margin-right: 160px;
-        padding: 20px;
+        padding: 0 20px 20px 20px;
+    }
+
+    .page-layout {
+padding:0 20px 20px 20px;
     }
 
      h1.index-page-title {
         position: sticky;
-        top: 40px;
+        top: 15vh;
     }
-    .plays-index {
-        grid-template-columns: repeat(3, 1fr);
+   
+
+
+    .about-page-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         gap: 2rem;
+        margin-left: 0;
     }
+h1.page-title {
+    position: static;
+    
+}
+    .about-sidebar {
+    flex: 1;
+    position: static;
+    top: 15vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.current-productions-page-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 4rem;
+    
+}
+
+.quotes-archive-content {
+    column-count: 3;
+    column-gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.video-index {
+    flex: 2;
+    column-count: 3;
+    column-gap: 1rem;
+    width: 100%;
+
+}
+
 }
 
 @media (max-width: 768px) {
+
+    .site-header{
+        height: 15vh;
+
+    }
     .page-layout {
         flex-direction: column;
-        padding: 10px;
+        padding: 0 20px 20px 20px;
     }
     .site-nav {
         position: relative;
@@ -806,10 +899,29 @@ line-height: 1rem;
     .page-content {
         display: flex;
         flex-direction: column;
-
-        margin: 20px;
-        padding: none;
+        margin: 0;
+        padding: 0;
     }
+
+    .about-page-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        margin-left: 0;
+    }
+h1.page-title {
+    position: static;
+    
+}
+    .about-sidebar {
+    flex: 1;
+    position: static;
+    top: 15vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 
     h1.index-page-title {
         position: sticky;
@@ -854,7 +966,73 @@ line-height: 1rem;
         z-index: 1000;
     }
 
+    .current-productions-page-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 40px;
+    gap: 4rem;
+    
+    }
 
+    .productions-info {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  
+    }
+    .current-productions-list {
+        display: none;
+    font-family: "80-kb-Sharp";
+    font-size: 1rem;
+    line-height: 1.6rem;
+    }
+
+    .productions-calendar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-inline: auto;
+    align-items: center;
+    }
+
+    .quotes-archive-content {
+    column-count: 2;
+    column-gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.video-index {
+    flex: 2;
+    column-count: 2;
+    column-gap: 1rem;
+    width: 100%;
+
+}
+
+
+}
+
+@media (max-width: 500px) {
+
+    .quotes-archive-content {
+    column-count: 2;
+    column-gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.video-index {
+    flex: 1;
+    column-count: 4;
+    column-gap: 1rem;
+    width: 100%;
+
+}
 }
 
 
