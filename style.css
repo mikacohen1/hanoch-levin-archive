@@ -946,7 +946,13 @@ p.homepage-quote {
         flex-direction: column;
         padding: 0 20px 20px 20px;
     }
+
+    .page-layout.homepage-only {
+        position: flex;
+        flex-direction: column;
+    }
     .site-nav {
+        flex: auto;
         position: relative;
         width: 100%;
         top: 0;
@@ -967,6 +973,16 @@ p.homepage-quote {
         overflow-y: hidden;
 
     }
+    .site-nav.homepage-only {
+        position: sticky;
+        top: 10vh;
+        padding: 0 10px 5vh 10px ;
+    }
+    .page-content.homepage-only {
+    flex-direction: column;
+    align-items: center;
+    
+}
 
     .site-nav-list::-webkit-scrollbar {
         display: none;
@@ -975,6 +991,15 @@ p.homepage-quote {
     .site-nav-list-item {
         flex: 0 0 auto;
         white-space: nowrap; }
+
+    .homepage-quote-wrapper {
+    
+    position: sticky;
+    top: 20vh;
+    z-index: 00;
+
+    
+}
 
     p.homepage-quote {
     font-family: "VC_David";
@@ -1133,7 +1158,7 @@ h1.page-title {
     p.homepage-quote {
     font-family: "VC_David";
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.7rem;
     filter: none;
     }
 
